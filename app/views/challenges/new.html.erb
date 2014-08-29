@@ -1,0 +1,21 @@
+<div class="authform">
+	<h3>Create new Challenge</h3>
+	<%= simple_form_for :challenge, url: challenges_path do |f| %>
+		<% if @challenge.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= @challenge.errors.count %> error(s) prohibited this user form being saved: </h2>
+				<ul>
+					<% @challenge.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<%= f.input :name, :placeholder => 'Name', :input_html => {:class => 'form-control', :autofocus => true} %>
+		
+		<%= f.input :starts_on, :placeholder => 'Date', as: :string, :input_html => {:class => 'form-control'} %>
+	
+		<%= f.input :description, :placeholder => 'Description', as: :text, :input_html => {:class => 'form-control'} %>
+		<%= f.submit 'Create', :class => 'button right' %>
+	<% end %>
+</div>

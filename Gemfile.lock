@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: b0c93d9e5cac3d3bb6d6f1d7ac57adbba3d025c1
+  branch: tarruda
+  specs:
+    datetimepicker-rails (3.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -163,6 +170,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass
   coffee-rails (~> 4.0.0)
+  datetimepicker-rails (>= 3.0.0)!
   devise
   jbuilder (~> 2.0)
   jquery-rails

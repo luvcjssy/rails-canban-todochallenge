@@ -15,3 +15,9 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+//= require_self
+jQuery(function(){
+  	jQuery("#challenge_starts_on").datepicker({
+  		format: "dd-mm-yyyy"
+  	});
+})

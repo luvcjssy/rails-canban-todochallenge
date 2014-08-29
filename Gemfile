@@ -14,6 +14,7 @@ gem 'devise'
 gem 'mysql2'
 gem 'pundit'
 gem 'simple_form'
+gem 'datetimepicker-rails', '>= 3.0.0', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git', :branch => 'tarruda'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

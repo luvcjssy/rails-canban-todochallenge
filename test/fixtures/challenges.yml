@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  starts_on: 2014-08-27
+  code: MyString
+  description: MyString
+  creator_id: 1
+
+two:
+  name: MyString
+  starts_on: 2014-08-27
+  code: MyString
+  description: MyString
+  creator_id: 1
