@@ -1,0 +1,2 @@
+class MonthlyTask < Task
+end

@@ -1,0 +1,5 @@
+<% if @task.errors.empty? %>
+    jQuery('#task-list').append("<%=j(render(:partial => 'task', :object => @task))%>");
+<% else %>
+    alert("<%=j(@task.errors.full_messages)%>");
+<% end %>

@@ -1,0 +1,34 @@
+<br/>
+<div class="task-wrapper">
+	<div class="row">
+		<div class="col-xs-12 col-md-3"></div>
+		<div class="col-xs-12 col-md-6">
+			<h3>My Challenge</h3>
+			<%= link_to 'Create new challenge', new_challenge_path %>
+			
+			<div class="row" style="color:red">
+				<div class="col-xs-5">Name</div>
+		        <div class="col-xs-3">Starts on</div>
+		        <div class="col-xs-2">Description</div>
+		        <div class="col-xs-2">Add task</div>
+			</div>
+			<br/>
+	      	<% @challenges.each do |challenge| %>
+		        <% next if challenge.new_record?%>
+		        	<div class="row">
+		            	<div class="col-xs-5"><%= challenge.name %></div>
+		            	<div class="col-xs-3"><%= challenge.starts_on %></div>
+		            	<div class="col-xs-2"><%= challenge.description %></div>
+		            	<div class="col-xs-2">
+		              		<%= link_to challenge_tasks_path(challenge) do %>
+		                  		<span class="glyphicon glyphicon-edit">&nbsp;</span>
+		              		<% end %>
+		            	</div>
+		          </div>
+		    <% end %>
+		</div>
+		<div class="col-xs-12 col-md-3">
+			
+		</div>
+	</div>
+</div>

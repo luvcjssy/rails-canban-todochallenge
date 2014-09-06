@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827120333) do
+ActiveRecord::Schema.define(version: 20140829114526) do
 
   create_table "challenges", force: true do |t|
     t.string   "name"
@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20140827120333) do
     t.string   "code"
     t.string   "description", limit: 500
     t.integer  "creator_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", force: true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "point"
+    t.integer  "challenge_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
